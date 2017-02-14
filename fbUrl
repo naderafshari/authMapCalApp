@@ -1,0 +1,37 @@
+call back url:
+https://lastmile-ec87e.firebaseapp.com/__/auth/handler
+
+
+ionic plugin add cordova-plugin-facebook4 --save --variable APP_ID="facebook_app_id" --variable APP_NAME="StarterFirebasePackV2"
+
+
+<widget id="com.ionicframework.starterfirebasepackv2396207" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+com.ionicframework.starterfirebasepackv2396207
+
+
+keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore | openssl sha1 -binary | openssl base64
+
+
+google
+cordova plugin add cordova-plugin-googleplus --save --variable REVERSED_CLIENT_ID=com.googleusercontent.apps.694677019180-49tdprvmo6kuei2d6gljbf22t7212h56
+
+for android:
+keytool -exportcert -list -v -alias androiddebugkey -keystore ~/.android/debug.keystore
+keytool -genkey -v -keystore ~/.android/debug.keystore -storepass android -alias androiddebugkey -keypass android -dname "CN=Android Debug,O=Android,C=US"
+0E:13:A1:39:1F:5C:CE:CC:F8:56:F1:85:B5:B1:78:54:9E:67:E1:29
+
+
+
+Twitter(fabric.io)
+
+      <meta-data
+          android:name="io.fabric.ApiKey"
+          android:value="f5709cffeadbd3b3ce1fdda9f8daf83d522cf9fd"
+      />
+
+
+
+cordova plugin add twitter-connect-plugin --variable FABRIC_KEY=f5709cffeadbd3b3ce1fdda9f8daf83d522cf9fd
+
+<preference name="TwitterConsumerKey" value="WjGr72ZrBbB0Mi7vP9Gj4XVvO" />
+<preference name="TwitterConsumerSecret" value="SGb5JHhNP6zobB3AUT2UejGw5fMYFueuEfFGRsQM0NtKwB9q2L" />

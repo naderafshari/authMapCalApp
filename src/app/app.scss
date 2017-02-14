@@ -15,6 +15,10 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+.form-error-list .item-inner {
+  background-color: rgba(247, 67, 67, 0.08)
+}
+
 @media (min-width: 768px) {
 	.ion-page {
 		margin-left: 30%;

@@ -23,6 +23,10 @@
     "@angular/platform-browser-dynamic": "2.2.1",
     "@angular/platform-server": "2.2.1",
     "@ionic/storage": "1.1.7",
+    "@types/jasmine": "2.5.39",
+    "@types/request": "0.0.37",
+    "angularfire2": "2.0.0-beta.6",
+    "firebase": "~3.0.0",
     "angular2-google-maps": "0.16.0",
     "es6-promise": "3.0.2",
     "es6-shim": "^0.35.0",
@@ -44,6 +48,7 @@
     "cordova-plugin-whitelist",
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
+    "cordova-plugin-inappbrowser",
     "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [
@@ -54,5 +59,5 @@
       "locator": "ios"
     }
   ],
-  "description": "supermodular2-rc0: An Ionic project"
+  "description": "LastMile: An Ionic project"
 }
