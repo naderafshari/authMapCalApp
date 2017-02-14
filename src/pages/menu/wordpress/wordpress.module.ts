@@ -1,6 +1,6 @@
 import { IonicModule } from 'ionic-angular';
 import { NgModule } from '@angular/core';
-import { PipesModule } from '../../pipes/pipes.module';
+import { PipesModule } from '../../../pipes/pipes.module';
 
 import { WordpressItemPage } from './item/wordpress.item.page';
 import { WordpressListPage } from './list/wordpress.list.page';

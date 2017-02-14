@@ -6,10 +6,10 @@ import { SlideBoxPage } from '../slide-box/slide-box.page';
 import { GoogleMapsPage } from '../google-maps/google-maps.page';
 
 import { Tile } from './models/tile.model';
-import { EmailService } from '../../services/email.service';
-import { CallService } from '../../services/call.service';
-import { MapsService } from '../../services/maps.service';
-import { InAppBrowserService } from '../../services/in-app-browser.service';
+import { EmailService } from '../../../services/email.service';
+import { CallService } from '../../../services/call.service';
+import { MapsService } from '../../../services/maps.service';
+import { InAppBrowserService } from '../../../services/in-app-browser.service';
 import { data } from './home-data';
 
 @Component({

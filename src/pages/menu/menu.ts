@@ -4,6 +4,11 @@ import { AngularFire } from 'angularfire2';
 import { AboutPage } from './about/about';
 import { SettingsPage } from './settings/settings';
 import { LoginPage } from '../authentication/login/login';
+import { HomePage } from '../menu//home/home.page';
+import { WordpressListPage } from '../menu//wordpress/list/wordpress.list.page';
+import { SlideBoxPage } from '../menu//slide-box/slide-box.page';
+import { GoogleMapsPage } from '../menu//google-maps/google-maps.page';
+import { ComponentsListPage } from '../menu//components/list/components.list.page';
 
 @Component({
   templateUrl: 'menu.html'
@@ -11,7 +16,7 @@ import { LoginPage } from '../authentication/login/login';
 export class Menu {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = AboutPage;
+  rootPage: any = HomePage;
   pages: Array<{title: string, component: any}>;
 
   constructor(
@@ -19,6 +24,11 @@ export class Menu {
   ) {
     // Add your pages to be displayed in the menu
     this.pages = [
+      { title: 'Home', component: HomePage },
+      { title: 'WordPress', component: WordpressListPage },
+      { title: 'SlideBox', component: SlideBoxPage },
+      { title: 'GoogleMap', component: GoogleMapsPage },
+      { title: 'Components', component: ComponentsListPage },
       { title: 'About', component: AboutPage },
       { title: 'Settings', component: SettingsPage }
     ];

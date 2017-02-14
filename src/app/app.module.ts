@@ -13,11 +13,11 @@ import { Config } from '../config';
 import { Menu } from '../pages/menu/menu';
 import { AboutPage } from '../pages/menu/about/about';
 import { SettingsPage } from '../pages/menu/settings/settings';
-import { ComponentsModule } from '../pages/components/components.module';
-import { GoogleMapsModule } from '../pages/google-maps/google-maps.module';
-import { HomeModule } from '../pages/home/home.module';
-import { SlideBoxModule } from '../pages/slide-box/slide-box.module';
-import { WordpressModule } from '../pages/wordpress/wordpress.module';
+import { ComponentsModule } from '../pages/menu//components/components.module';
+import { GoogleMapsModule } from '../pages/menu//google-maps/google-maps.module';
+import { HomeModule } from '../pages/menu//home/home.module';
+import { SlideBoxModule } from '../pages/menu//slide-box/slide-box.module';
+import { WordpressModule } from '../pages/menu//wordpress/wordpress.module';
 // Authentication
 import { LoginPage } from '../pages/authentication/login/login';
 import { RegistrationPage } from '../pages/authentication/registration/registration';
