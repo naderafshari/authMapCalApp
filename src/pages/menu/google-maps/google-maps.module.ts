@@ -10,5 +10,4 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
 	imports: [IonicModule, AgmCoreModule]
 })
 export class GoogleMapsModule {
-
 }
