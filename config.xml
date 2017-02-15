@@ -47,6 +47,10 @@
   <plugin name="cordova-plugin-googleplus" spec="~5.1.1">
       <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.694677019180-49tdprvmo6kuei2d6gljbf22t7212h56" />
   </plugin>
+  <plugin name="cordova-plugin-googlemaps" spec="https://github.com/phonegap-googlemaps-plugin/cordova-plugin-googlemaps">
+      <variable name="API_KEY_FOR_ANDROID" value="AIzaSyCNH6LnheoGVxtK1-B6SXcy5PZDwa2AZoE" />
+      <variable name="API_KEY_FOR_IOS" value="AIzaSyD73F5Z1h5oZ1CarsVjMABHjkLxqtIERCM" />
+  </plugin>  
   <preference name="TwitterConsumerKey" value="WjGr72ZrBbB0Mi7vP9Gj4XVvO" />
   <preference name="TwitterConsumerSecret" value="SGb5JHhNP6zobB3AUT2UejGw5fMYFueuEfFGRsQM0NtKwB9q2L" />
 </widget>

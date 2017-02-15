@@ -35,3 +35,13 @@ cordova plugin add twitter-connect-plugin --variable FABRIC_KEY=f5709cffeadbd3b3
 
 <preference name="TwitterConsumerKey" value="WjGr72ZrBbB0Mi7vP9Gj4XVvO" />
 <preference name="TwitterConsumerSecret" value="SGb5JHhNP6zobB3AUT2UejGw5fMYFueuEfFGRsQM0NtKwB9q2L" />
+
+config.xml
+google map android api key 
+AIzaSyCNH6LnheoGVxtK1-B6SXcy5PZDwa2AZoE
+
+google map ios api key 
+AIzaSyD73F5Z1h5oZ1CarsVjMABHjkLxqtIERCM
+
+google map js api key
+AIzaSyAIUI28kRmTTavxKQKD6x6DpgdfynQupdw
