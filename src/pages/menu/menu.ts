@@ -4,11 +4,12 @@ import { AngularFire } from 'angularfire2';
 import { AboutPage } from './about/about';
 import { SettingsPage } from './settings/settings';
 import { LoginPage } from '../authentication/login/login';
-import { HomePage } from '../menu//home/home.page';
-import { WordpressListPage } from '../menu//wordpress/list/wordpress.list.page';
-import { SlideBoxPage } from '../menu//slide-box/slide-box.page';
-import { GoogleMapsPage } from '../menu//google-maps/google-maps.page';
-import { ComponentsListPage } from '../menu//components/list/components.list.page';
+import { HomePage } from './home/home.page';
+import { HomeMapPage } from './home-map/home-map';
+import { WordpressListPage } from './wordpress/list/wordpress.list.page';
+import { SlideBoxPage } from './slide-box/slide-box.page';
+import { GoogleMapsPage } from './google-maps/google-maps.page';
+import { ComponentsListPage } from './components/list/components.list.page';
 
 @Component({
   templateUrl: 'menu.html'
@@ -28,6 +29,7 @@ export class Menu {
       { title: 'WordPress', component: WordpressListPage },
       { title: 'SlideBox', component: SlideBoxPage },
       { title: 'GoogleMap', component: GoogleMapsPage },
+      { title: 'Current Location', component: HomeMapPage },
       { title: 'Components', component: ComponentsListPage },
       { title: 'About', component: AboutPage },
       { title: 'Settings', component: SettingsPage }
