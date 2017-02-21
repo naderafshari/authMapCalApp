@@ -10,15 +10,29 @@
  		<button ion-button menuToggle>
 			<ion-icon name="menu"></ion-icon>
 		</button>
-    <ion-title>Current Location</ion-title>
-    <ion-buttons end>
+    <ion-title>My Location</ion-title>
+    <ion-input type=number style="border: 1px solid black" [(ngModel)]="x"></ion-input>
+    <ion-input type=number style="border: 1px solid black" [(ngModel)]="y"></ion-input>
+<!--    <ion-buttons end>
       <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
-    </ion-buttons>  
+    </ion-buttons>  -->
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Mode of Travel</ion-label>
+      <ion-select [(ngModel)]="mode" (change)="calcRoute()">
+      <ion-option value="DRIVING">Driving</ion-option>
+      <ion-option value="WALKING">Walking</ion-option>
+      <ion-option value="BICYCLING">Bicycling</ion-option>
+      <ion-option value="TRANSIT">Transit</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
   <div #map id="map"></div>  
+
 </ion-content>

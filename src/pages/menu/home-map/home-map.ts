@@ -28,7 +28,7 @@ export class HomeMapPage {
 
   loadMap(){
 
-    Geolocation.getCurrentPosition().then((position) => {
+    Geolocation.watchPosition().subscribe((position) => {
   
       let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
@@ -40,17 +40,23 @@ export class HomeMapPage {
 
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
       
+      this.addMarker(latLng);
+      
+      let latLng2 = new google.maps.LatLng(position.coords.latitude+1, position.coords.longitude);
+
+      this.addMarker(latLng2);
+      
     }, (err) => {
       console.log(err);
     });
    }
 
-  addMarker(){
+  addMarker(latLng){
   
     let marker = new google.maps.Marker({
       map: this.map,
       animation: google.maps.Animation.DROP,
-      position: this.map.getCenter()
+      position: latLng
     });
   
     let content = "<h4>Information!</h4>";          
