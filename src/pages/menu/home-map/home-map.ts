@@ -18,6 +18,7 @@ declare var google;
 export class HomeMapPage {
   @ViewChild('map') mapElement: ElementRef;
   map: any;
+  bounds = new google.maps.LatLngBounds();
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
@@ -39,13 +40,15 @@ export class HomeMapPage {
       }
 
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-      
+
       this.addMarker(latLng);
       
       let latLng2 = new google.maps.LatLng(position.coords.latitude+1, position.coords.longitude);
 
       this.addMarker(latLng2);
-      
+
+      this.map.fitBounds(this.bounds);
+
     }, (err) => {
       console.log(err);
     });
@@ -62,6 +65,7 @@ export class HomeMapPage {
     let content = "<h4>Information!</h4>";          
   
     this.addInfoWindow(marker, content);
+    this.bounds.extend(marker.position);
   }
 
   addInfoWindow(marker, content){
@@ -74,25 +78,5 @@ export class HomeMapPage {
       infoWindow.open(this.map, marker);
     });
   }
-
-/*
-moveMarker()
-{
-    xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET","http://x.com/x13/?testloc=1",false);
-    xmlhttp.send();
-
-    var data = xmlhttp.responseText;
-    vals = data.split(',');
-    latv = parseFloat(vals[0]);
-    lonv = parseFloat(vals[1]);
-    myLatlng = new google.maps.LatLng(latv,lonv);
-
-    var fld = document.getElementById('before_map');
-    fld.innerText = ' ' + 'lat:' + latv + ', lon: ' + lonv + ' ' + myLatlng.toString();
-    marker.setPosition = myLatlng;
-}
-*/
-
 
 }
