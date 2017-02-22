@@ -18,65 +18,59 @@ declare var google;
 export class HomeMapPage {
   @ViewChild('map') mapElement: ElementRef;
   map: any;
+  lat: any;
+  lng: any;
   bounds = new google.maps.LatLngBounds();
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomeMapPage');
+
     this.loadMap();
   }
 
   loadMap(){
-
+    let options = {timeout: 10000, enableHighAccuracy: true};
+    Geolocation.getCurrentPosition(options).then((position) => {
+      this.lat = position.coords.latitude;
+      this.lng = position.coords.longitude;
+    });
     Geolocation.watchPosition().subscribe((position) => {
-  
-      let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-
+      let destLatLng = new google.maps.LatLng(this.lat+.005, this.lng);
       let mapOptions = {
-        center: latLng,
+        center: destLatLng,
         zoom: 20,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       }
-
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-
-      this.addMarker(latLng);
-      
-      let latLng2 = new google.maps.LatLng(position.coords.latitude+1, position.coords.longitude);
-
-      this.addMarker(latLng2);
-
+      this.addMarker(destLatLng);
+      let currLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+      this.addMarker(currLatLng);
       this.map.fitBounds(this.bounds);
-
     }, (err) => {
       console.log(err);
     });
+
    }
 
   addMarker(latLng){
-  
     let marker = new google.maps.Marker({
       map: this.map,
       animation: google.maps.Animation.DROP,
       position: latLng
     });
-  
     let content = "<h4>Information!</h4>";          
-  
     this.addInfoWindow(marker, content);
     this.bounds.extend(marker.position);
   }
 
   addInfoWindow(marker, content){
-  
     let infoWindow = new google.maps.InfoWindow({
       content: content
     });
-  
     google.maps.event.addListener(marker, 'click', () => {
       infoWindow.open(this.map, marker);
     });
   }
-
 }
