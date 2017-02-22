@@ -2,13 +2,6 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Geolocation } from 'ionic-native';
 
-/*
-  Generated class for the HomeMap page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
-
 declare var google;
 
 @Component({
@@ -26,7 +19,6 @@ export class HomeMapPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomeMapPage');
-
     this.loadMap();
   }
 
@@ -51,8 +43,7 @@ export class HomeMapPage {
     }, (err) => {
       console.log(err);
     });
-
-   }
+  }
 
   addMarker(latLng){
     let marker = new google.maps.Marker({
