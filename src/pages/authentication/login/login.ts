@@ -36,7 +36,7 @@ export class LoginPage {
   }
 
   doSomethingAfterUserLogin(user) {
-    console.info(`You can do something with the user details: ${JSON.stringify(user)}`);
+    //console.info(`You can do something with the user details: ${JSON.stringify(user)}`);
   }
 
   // Anonymous user login
