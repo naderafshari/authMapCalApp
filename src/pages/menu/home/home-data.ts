@@ -1,10 +1,10 @@
 export var data = {
-	facebook: 'https://www.facebook.com/ionicframework',
-	phoneNumber: '+306973216110',
+	facebook: 'https://www.facebook.com/naturalhealthchirocare',
+	phoneNumber: '3105198877',
 	email: {
-		to: 'skounis@gmail.com',
-		subject: 'Cordova Icons',
-		body: 'How are you? Nice greetings from Leipzig'
+		to: 'doctorbchiro@gmail.com',
+		subject: 'Antiaging  Chiro App',
+		body: 'How are you?'
 	},
-	officeLocation: '37.7736854,-122.421034'
+	officeLocation: '33.754978, -118.308638'
 };

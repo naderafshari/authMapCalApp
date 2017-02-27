@@ -1,7 +1,13 @@
 .getting-started {
 	.home-hello {
 		position: relative;
-
+        img{
+			height: 50vh;
+			width: auto;
+//			align-items: center;
+			margin: auto;
+			display: block;
+		}
 		.hello-title {
 			position: absolute;
 			left: 0;

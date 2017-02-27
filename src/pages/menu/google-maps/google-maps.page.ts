@@ -13,10 +13,10 @@ export class GoogleMapsPage {
 	constructor() {
 		this.initMarkers();
 		this.origin = {
-			lat: 51.673858,
-			lng: 7.815982
+			lat: 33.754978, 
+			lng: -118.308638
 		};
-		this.zoom = 8;
+		this.zoom = 13;
 	}
 
 	public clickedMarker(label: string) {
@@ -25,17 +25,9 @@ export class GoogleMapsPage {
 
 	private initMarkers(): void {
 		this.markers = [{
-			lat: 51.673858,
-			lng: 7.815982,
+			lat: 33.754978,
+			lng: -118.308638,
 			label: 'A'
-		}, {
-			lat: 51.373858,
-			lng: 7.215982,
-			label: 'B'
-		}, {
-			lat: 51.723858,
-			lng: 7.895982,
-			label: 'C'
 		}];
 	}
 }
