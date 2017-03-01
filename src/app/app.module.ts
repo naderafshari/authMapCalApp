@@ -13,11 +13,13 @@ import { Config } from '../config';
 import { Menu } from '../pages/menu/menu';
 import { AboutPage } from '../pages/menu/about/about';
 import { SettingsPage } from '../pages/menu/settings/settings';
-import { ComponentsModule } from '../pages/menu//components/components.module';
-import { GoogleMapsModule } from '../pages/menu//google-maps/google-maps.module';
-import { HomeModule } from '../pages/menu//home/home.module';
-import { SlideBoxModule } from '../pages/menu//slide-box/slide-box.module';
-import { WordpressModule } from '../pages/menu//wordpress/wordpress.module';
+import { ComponentsModule } from '../pages/menu/components/components.module';
+import { GoogleMapsModule } from '../pages/menu/google-maps/google-maps.module';
+import { HomeModule } from '../pages/menu/home/home.module';
+import { SlideBoxModule } from '../pages/menu/slide-box/slide-box.module';
+import { WordpressModule } from '../pages/menu/wordpress/wordpress.module';
+import { ServicesPage } from '../pages/menu/services/services';
+import { ServicesModule } from '../pages/menu/services/services.modules';
 // Authentication
 import { LoginPage } from '../pages/authentication/login/login';
 import { RegistrationPage } from '../pages/authentication/registration/registration';
@@ -28,6 +30,7 @@ import { AuthConfig } from './config'
 		MyApp,
 		AboutPage,
 		SettingsPage,
+		ServicesPage,
 		Menu,
 		LoginPage,
 		RegistrationPage,
@@ -41,7 +44,8 @@ import { AuthConfig } from './config'
 		GoogleMapsModule,
 		HomeModule,
 		SlideBoxModule,
-		WordpressModule
+		WordpressModule,
+		ServicesModule
 	],
 	bootstrap: [IonicApp],
 	entryComponents: [
@@ -50,7 +54,8 @@ import { AuthConfig } from './config'
 		LoginPage,
 		RegistrationPage,
 		AboutPage,
-		SettingsPage
+		SettingsPage,
+		ServicesPage
 	],
 	providers: [
 		Config,

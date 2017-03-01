@@ -57,8 +57,8 @@ export class LoginPage {
 
   signInWithOAuth(provider: string) {
     //INFO: Change this method to enable/disable browser mode
-    // this.authenticator.signInWithOAuth(provider)  //for real device 
-    this.authenticator.signInWithOAuthBrowserMode(provider)  //for browser (ionic serve)
+     this.authenticator.signInWithOAuth(provider)  //for real device 
+    //this.authenticator.signInWithOAuthBrowserMode(provider)  //for browser (ionic serve)
     .then((user) => {
       this.doSomethingAfterUserLogin(user);
     })

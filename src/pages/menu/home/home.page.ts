@@ -3,6 +3,7 @@ import { Nav } from 'ionic-angular';
 
 //import { WordpressListPage } from '../wordpress/list/wordpress.list.page';
 //import { SlideBoxPage } from '../slide-box/slide-box.page';
+import { ServicesPage } from '../services/services';
 import { GoogleMapsPage } from '../google-maps/google-maps.page';
 
 import { Tile } from './models/tile.model';
@@ -63,22 +64,14 @@ export class HomePage {
 	private initTiles(): void {
 		this.tiles = [[{
 			title: 'Services',
-			path: 'home',
+			path: 'services',
 			icon: 'body',
-			component: HomePage
-/*			title: 'Wordpress',
-			path: 'wordpress-articles',
-			icon: 'logo-wordpress',
-			component: WordpressListPage*/
+			component: ServicesPage
 		}, {
 			title: 'Office Hours',
 			path: 'home',
 			icon: 'clock',
 			component: HomePage
-/*			title: 'Slides',
-			path: 'slides',
-			icon: 'swap',
-			component: SlideBoxPage*/
 		}], [{
 			title: 'Map',
 			path: 'map',
