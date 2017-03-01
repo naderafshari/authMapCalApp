@@ -57,6 +57,10 @@ export class HomePage {
 		this.browserService.open(data.facebook);
 	}
 
+	public openInstagramPage() {
+		this.browserService.open(data.instagram);
+	}
+
 	public callUs() {
 		this.callService.call(data.phoneNumber);
 	}
