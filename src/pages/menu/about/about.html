@@ -1,45 +1,16 @@
 <ion-header>
-  <ion-navbar hideBackButton>
+  <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>
-      About you
-    </ion-title>
+    <ion-title>About Us</ion-title>
   </ion-navbar>
 </ion-header>
+
 <ion-content padding>
-  <div *ngFor="let message of messages | async">
+  Have you been looking for a chiropractor in Rancho Palos Verdes? Unlike conventional medicine, which focuses on attempting to treat disease once it occurs, the chiropractic care offered at Natural Health Chiropractic in Rancho Palos Verdes emphasizes the importance of improving your health in an effort to reduce the risk of pain and illness in the first place. Given the option, most people would prefer to be healthy and avoid illness if possible, and chiropractic care can help those people achieve their health and wellness goals. For those patients who may already be in pain, chiropractic care offers a unique way to provide pain relief for many types of pain and conditions, including back pain, neck pain and more! Pain relief and pain prevention are two of the reasons that chiropractic services have become so popular, both here in Rancho Palos Verdes and around the world.
 
-    <div class="message-wrapper" *ngIf="userDetails.uid !== message.userUid">
-      <img class="profile-pic left" [src]="message.avatar"/>
-      <div class="chat-bubble left">
-        <div class="message" [innerHTML]="message.value | nl2br"></div>
-        <div class="message-detail">
-          <em class="bold">{{ message.fullName }}</em>
-        </div>
-      </div>
-    </div>
+  If you have been suffering from back pain in Rancho Palos Verdes, don't wait another second to begin your road to recovery! At Natural Health Chiropractic, our chiropractic techniques can assist patients with the rediscovery of health and wellness that had been previously known but long lost. For others, the chiropractic journey may offer a new sense of balance and wellness that one has never before experienced. If you want to start living every day pain free, call us at (310) 519-8877 to schedule an appointment!
 
-    <div class="message-wrapper" *ngIf="userDetails.uid === message.userUid">
-      <img class="profile-pic right" [src]="userDetails.avatar"/>
-      <div class="chat-bubble right">
-        <div class="message" [innerHTML]="message.value | nl2br"></div>
-        <div class="message-detail">
-          <em><b>You</b></em>
-        </div>
-      </div>
-    </div>
-
-    <div class="cf"></div>
-  </div>
-
+  People around the world are recognizing the benefit of seeking an alternative to traditional medicine; one that will help them achieve and maintain optimal health without requiring invasive treatments such as surgery. Please take the time to meet the chiropractor and our network of chiropractic and wellness care professionals dedicated to helping you achieve your wellness objectives. To fully understand the nature of your health, we recommend that you join our free website membership program. As a patient at Natural Health Chiropractic we will personally tailor a chiropractic and wellness program specifically targeted to your needs using the least invasive yet highly-effective techniques and services.
 </ion-content>
-<form [formGroup]="chatControl" (ngSubmit)="sendMessage()">
-  <ion-footer class="message-footer" keyboard-attach>
-    <div class="message-form">
-      <ion-textarea [(ngModel)]='message' formControlName="message" placeholder="Write a message"></ion-textarea>
-      <button type="submit" full ion-button block color="secondary" [disabled]="!chatControl.valid">Send</button>
-    </div>
-  </ion-footer>
-</form>

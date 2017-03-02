@@ -5,6 +5,7 @@ import { Nav } from 'ionic-angular';
 //import { SlideBoxPage } from '../slide-box/slide-box.page';
 import { ServicesPage } from '../services/services';
 import { GoogleMapsPage } from '../google-maps/google-maps.page';
+import { AboutPage } from '../about/about';
 
 import { Tile } from './models/tile.model';
 import { EmailService } from '../../../services/email.service';
@@ -72,15 +73,20 @@ export class HomePage {
 			icon: 'body',
 			component: ServicesPage
 		}, {
-			title: 'Office Hours',
-			path: 'home',
-			icon: 'clock',
-			component: HomePage
+			title: 'About',
+			path: 'about',
+			icon: 'help',
+			component: AboutPage
 		}], [{
 			title: 'Map',
 			path: 'map',
 			icon: 'map',
 			component: GoogleMapsPage
+		}, {
+			title: 'Office Hours',
+			path: 'home',
+			icon: 'clock',
+			component: HomePage
 		}]];
 	}
 }
