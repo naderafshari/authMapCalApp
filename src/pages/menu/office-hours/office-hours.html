@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>office-hours</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-row center>
+		<ion-col>
+			<div>Day</div>
+		</ion-col>
+		<ion-col>
+			<div>Open</div>
+		</ion-col>
+		<ion-col>
+			<div>Close</div>
+		</ion-col>
+	</ion-row>
+	<ion-row center *ngFor="let officeHour of officeHours">
+		<ion-col>
+			<div>{{ officeHour.Day}}</div>
+		</ion-col>
+		<ion-col>
+			<div>{{ officeHour.Open }}</div>
+		</ion-col>
+		<ion-col>
+			<div>{{ officeHour.Close }}</div>
+		</ion-col>
+	</ion-row>
+</ion-content>

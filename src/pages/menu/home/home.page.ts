@@ -6,6 +6,7 @@ import { Nav } from 'ionic-angular';
 import { ServicesPage } from '../services/services';
 import { GoogleMapsPage } from '../google-maps/google-maps.page';
 import { AboutPage } from '../about/about';
+import { OfficeHoursPage } from '../office-hours/office-hours'
 
 import { Tile } from './models/tile.model';
 import { EmailService } from '../../../services/email.service';
@@ -84,9 +85,9 @@ export class HomePage {
 			component: GoogleMapsPage
 		}, {
 			title: 'Office Hours',
-			path: 'home',
+			path: 'office-hours',
 			icon: 'clock',
-			component: HomePage
+			component: OfficeHoursPage
 		}]];
 	}
 }
