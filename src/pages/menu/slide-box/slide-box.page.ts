@@ -7,7 +7,7 @@ export class SlideBoxPage {
 	public items: any[];
 
 	constructor() {
-		this.items = this.generateItems(10);   //set the parameter to the number of files in the folder, the bash script provides count
+		this.items = this.generateItems(34);   //set the parameter to the number of files in the folder, the bash script provides count
 	}
 
 	private generateItems(n: number): any {
