@@ -38,7 +38,7 @@ export class LoginPage {
 
   doSomethingAfterUserLogin(user) {
     //console.info(`You can do something with the user details: ${JSON.stringify(user)}`);
-    this.navCtrl.push(WordpressListPage);
+    this.navCtrl.setRoot(WordpressListPage);
 
   }
 

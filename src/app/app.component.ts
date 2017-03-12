@@ -3,11 +3,11 @@ import { App, Events, Platform, MenuController, Nav } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 import { AngularFire } from 'angularfire2';
 
-import { HomePage } from '../pages/menu//home/home.page';
+import { HomePage } from '../pages/menu/home/home.page';
 import { WordpressListPage } from '../pages/user/wordpress/list/wordpress.list.page';
-import { SlideBoxPage } from '../pages/menu//slide-box/slide-box.page';
-import { GoogleMapsPage } from '../pages/menu//google-maps/google-maps.page';
-import { ComponentsListPage } from '../pages/menu//components/list/components.list.page';
+import { SlideBoxPage } from '../pages/menu/slide-box/slide-box.page';
+import { GoogleMapsPage } from '../pages/menu/google-maps/google-maps.page';
+import { ComponentsListPage } from '../pages/menu/components/list/components.list.page';
 // Root pages to be used based on authentication
 import { Menu } from '../pages/menu/menu';
 import { LoginPage } from '../pages/authentication/login/login';

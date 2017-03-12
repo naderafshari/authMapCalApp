@@ -31,13 +31,12 @@ export class WordpressListPage implements OnInit {
 		// Verify if user is logged in
 		this.af.auth.subscribe(user => {
 			if (user) {
-				//console.info("Authenticated - pushing menu");
+				console.info("User Authenticated");
 				this.authenticatorService.setUser(user);
 			} else {
-				//console.info("User not logged in");
+				console.info("User not logged in");
 				this.authenticatorService.invalidateUser();
-				this.nav.push(Menu);
-				this.nav.push(LoginPage);
+				this.nav.setRoot(LoginPage);
 			}
 		});
  	}

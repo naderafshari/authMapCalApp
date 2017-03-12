@@ -2,12 +2,12 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav } from 'ionic-angular';
 import { AngularFire } from 'angularfire2';
 import { ServicesPage } from './services/services';
-import { LoginPage } from '../authentication/login/login';
-import { HomePage } from '../menu//home/home.page';
+//import { LoginPage } from '../authentication/login/login';
+import { HomePage } from '../menu/home/home.page';
 import { SlideBoxPage } from '../menu//slide-box/slide-box.page';
-import { GoogleMapsPage } from '../menu//google-maps/google-maps.page';
-import { ComponentsListPage } from '../menu//components/list/components.list.page';
-import { WordpressListPage } from '../user//wordpress/list/wordpress.list.page';
+import { GoogleMapsPage } from '../menu/google-maps/google-maps.page';
+import { ComponentsListPage } from '../menu/components/list/components.list.page';
+import { WordpressListPage } from '../user/wordpress/list/wordpress.list.page';
 //import { AboutPage } from './about/about';
 //import { SettingsPage } from './settings/settings';
 
@@ -44,6 +44,6 @@ export class Menu {
 
   logout() {
     this.af.auth.logout();
-    this.nav.setRoot(LoginPage);
+    this.nav.setRoot(HomePage);
   }
 }

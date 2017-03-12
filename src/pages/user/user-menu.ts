@@ -1,13 +1,13 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav } from 'ionic-angular';
 import { AngularFire } from 'angularfire2';
-import { LoginPage } from '../authentication/login/login';
+//import { LoginPage } from '../authentication/login/login';
 import { HomePage } from '../menu/home/home.page';
 import { WordpressListPage } from './wordpress/list/wordpress.list.page';
 import { SettingsPage } from './settings/settings';
 
 @Component({
-  templateUrl: 'menu.html'
+  templateUrl: 'user-menu.html'
 })
 export class Menu {
   @ViewChild(Nav) nav: Nav;
@@ -34,6 +34,6 @@ export class Menu {
 
   logout() {
     this.af.auth.logout();
-    this.nav.setRoot(LoginPage);
+    this.nav.setRoot(HomePage);
   }
 }
