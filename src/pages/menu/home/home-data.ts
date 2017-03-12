@@ -4,8 +4,8 @@ export var data = {
 	phoneNumber: '3105198877',
 	email: {
 		to: 'doctorbchiro@gmail.com',
-		subject: 'Antiaging  Chiro App',
-		body: 'How are you?'
+		subject: 'From Antiaging  Chiro App',
+		body: ''
 	},
 	officeLocation: '33.754978, -118.308638'
 };

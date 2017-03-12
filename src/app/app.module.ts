@@ -14,12 +14,12 @@ import { Menu } from '../pages/menu/menu';
 import { AboutPage } from '../pages/menu/about/about';
 import { OfficeHoursPage } from '../pages/menu/office-hours/office-hours';
 //import { ChatPage } from '../pages/menu/chat/chat';
-import { SettingsPage } from '../pages/menu/settings/settings';
+import { SettingsPage } from '../pages/user/settings/settings';
 import { ComponentsModule } from '../pages/menu/components/components.module';
 import { GoogleMapsModule } from '../pages/menu/google-maps/google-maps.module';
 import { HomeModule } from '../pages/menu/home/home.module';
 import { SlideBoxModule } from '../pages/menu/slide-box/slide-box.module';
-import { WordpressModule } from '../pages/menu/wordpress/wordpress.module';
+import { WordpressModule } from '../pages/user/wordpress/wordpress.module';
 import { ServicesPage } from '../pages/menu/services/services';
 import { ServicesModule } from '../pages/menu/services/services.modules';
 // Authentication

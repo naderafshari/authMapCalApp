@@ -6,7 +6,10 @@ Ionic pages and navigation.
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Firebase authentication</ion-title>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+    <ion-title>Authentication</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -56,9 +59,11 @@ Ionic pages and navigation.
           (click)="signInWithOAuth('Twitter')">
           <ion-icon name="logo-twitter"></ion-icon>
         </button>
+<!--
         <button ion-fab class="icon-logo" (click)="anonymousUser()">
           <ion-icon name="person"></ion-icon>
         </button>
+-->
     </ion-fab-list>
   </ion-fab>
 </ion-content>

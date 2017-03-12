@@ -4,7 +4,7 @@ import { StatusBar } from 'ionic-native';
 import { AngularFire } from 'angularfire2';
 
 import { HomePage } from '../pages/menu//home/home.page';
-import { WordpressListPage } from '../pages/menu//wordpress/list/wordpress.list.page';
+import { WordpressListPage } from '../pages/user/wordpress/list/wordpress.list.page';
 import { SlideBoxPage } from '../pages/menu//slide-box/slide-box.page';
 import { GoogleMapsPage } from '../pages/menu//google-maps/google-maps.page';
 import { ComponentsListPage } from '../pages/menu//components/list/components.list.page';
@@ -51,7 +51,7 @@ export class MyApp {
 						// Okay, so the platform is ready and our plugins are available.
 						// Here you can do any higher level native things you might need.
 						StatusBar.styleDefault();
-
+/*
 						// Verify if user is logged in
 						this.af.auth.subscribe(user => {
 							if (user) {
@@ -77,6 +77,9 @@ export class MyApp {
 						this.events.subscribe('user:resetPassword', user => {
 							console.info("This was trigger by the user:resetPassword event.");
 						});
+*/
+						//go to menu page for now
+						this.rootPage = Menu;
 					});
 		       }
 

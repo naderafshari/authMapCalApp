@@ -1,15 +1,15 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav } from 'ionic-angular';
 import { AngularFire } from 'angularfire2';
-//import { AboutPage } from './about/about';
-//import { SettingsPage } from './settings/settings';
 import { ServicesPage } from './services/services';
 import { LoginPage } from '../authentication/login/login';
 import { HomePage } from '../menu//home/home.page';
-import { WordpressListPage } from '../menu//wordpress/list/wordpress.list.page';
 import { SlideBoxPage } from '../menu//slide-box/slide-box.page';
 import { GoogleMapsPage } from '../menu//google-maps/google-maps.page';
 import { ComponentsListPage } from '../menu//components/list/components.list.page';
+import { WordpressListPage } from '../user//wordpress/list/wordpress.list.page';
+//import { AboutPage } from './about/about';
+//import { SettingsPage } from './settings/settings';
 
 @Component({
   templateUrl: 'menu.html'
@@ -27,9 +27,9 @@ export class Menu {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Services', component: ServicesPage },
-      { title: 'WordPress', component: WordpressListPage },
       { title: 'SlideBox', component: SlideBoxPage },
       { title: 'GoogleMap', component: GoogleMapsPage },
+      { title: 'WordPress', component: WordpressListPage },
       { title: 'Components', component: ComponentsListPage }
       /*{ title: 'About', component: AboutPage },
       { title: 'Settings', component: SettingsPage }*/

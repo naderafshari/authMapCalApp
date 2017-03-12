@@ -5,6 +5,7 @@ import { AuthenticatorService } from "../../../providers/authenticator";
 import { RegistrationPage } from '../registration/registration';
 import { AlertController, Events } from 'ionic-angular';
 import { AngularFire } from 'angularfire2';
+import { WordpressListPage } from '../../user/wordpress/list/wordpress.list.page'
 
 /*
   Generated class for the Login page.
@@ -37,6 +38,8 @@ export class LoginPage {
 
   doSomethingAfterUserLogin(user) {
     //console.info(`You can do something with the user details: ${JSON.stringify(user)}`);
+    this.navCtrl.push(WordpressListPage);
+
   }
 
   // Anonymous user login
