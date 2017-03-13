@@ -5,7 +5,6 @@ import { WordpressService } from './../wordpress.service';
 import { WordpressItemPage } from '../item/wordpress.item.page';
 import { Post } from '../models/post.model';
 import { LoginPage } from '../../../authentication/login/login';
-import { Menu } from '../../../menu/menu';
 import { AuthenticatorService } from '../../../../providers/authenticator';
 
 @Component({
