@@ -26,6 +26,9 @@ import { ServicesModule } from '../pages/menu/services/services.modules';
 import { LoginPage } from '../pages/authentication/login/login';
 import { RegistrationPage } from '../pages/authentication/registration/registration';
 import { AuthConfig } from './config'
+//Calendar
+import { NgCalendarModule } from 'ionic2-calendar';
+import { CalendarPage } from '../pages/menu/calendar/calendar';
 
 @NgModule({
 	declarations: [
@@ -38,7 +41,8 @@ import { AuthConfig } from './config'
 		Menu,
 		LoginPage,
 		RegistrationPage,
-		Nl2br
+		Nl2br,
+		CalendarPage
 	],
 	imports: [
 		IonicModule.forRoot(MyApp),
@@ -49,7 +53,8 @@ import { AuthConfig } from './config'
 		HomeModule,
 		SlideBoxModule,
 		WordpressModule,
-		ServicesModule
+		ServicesModule,
+		NgCalendarModule
 	],
 	bootstrap: [IonicApp],
 	entryComponents: [
@@ -61,7 +66,8 @@ import { AuthConfig } from './config'
 		OfficeHoursPage,
 		//ChatPage,
 		SettingsPage,
-		ServicesPage
+		ServicesPage,
+		CalendarPage		
 	],
 	providers: [
 		Config,

@@ -11,6 +11,7 @@ import { ComponentsListPage } from '../pages/menu/components/list/components.lis
 // Root pages to be used based on authentication
 import { Menu } from '../pages/menu/menu';
 import { LoginPage } from '../pages/authentication/login/login';
+import { CalendarPage } from '../pages/menu/calendar/calendar';
 
 // Authenticator
 import { AuthenticatorService } from '../providers/authenticator';
@@ -44,7 +45,8 @@ export class MyApp {
 						{ title: 'Wordpress', component: WordpressListPage, icon: 'logo-wordpress' },
 						{ title: 'Slides', component: SlideBoxPage, icon: 'swap' },
 						{ title: 'Google maps', component: GoogleMapsPage, icon: 'map' },
-						{ title: 'Components', component: ComponentsListPage, icon: 'grid' }
+						{ title: 'Components', component: ComponentsListPage, icon: 'grid' },
+						{ title: 'Calendar', component: CalendarPage, icon: 'grid' }
 					];
 
 					platform.ready().then(() => {
