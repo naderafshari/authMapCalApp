@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 /*
   Generated class for the Calendar page.
@@ -13,8 +14,56 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class CalendarPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  events: FirebaseListObservable <any>;
 
+  constructor(public navCtrl: NavController, public navParams: NavParams, public angFire: AngularFire, public alertCtrl: AlertController) {
+      this.events = angFire.database.list('/events');
+  }
+  addEvent():void {
+    let prompt = this.alertCtrl.create({
+        title: 'New Event',
+        message: 'Enter a New Event',
+        inputs: [
+            {
+                name: 'title',
+                placeholder: "Title"
+            },
+            {
+                name: 'startTime',
+                placeholder: "Strat Time"
+            },
+            {
+                name: 'endTime',
+                placeholder: "End Time"
+            },
+            {
+                name: 'allDay',
+                placeholder: "All Day"
+            }           
+        ],
+        buttons: [
+            {
+                text: "Cancel",
+                handler: data => {
+                    console.log("cancel clicked");
+                }
+            },
+                {
+                    text: "Add Event",
+                    handler: data => {
+                        this.events.push({
+                            title: data.title,
+                            startTime: data.startTime,
+                            endTime: data.endTime,
+                            allDay: data.allDay
+                        })
+                    }
+                }
+        ]
+    
+    })
+    prompt.present();
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad CalendarPage');
   }
@@ -26,7 +75,8 @@ export class CalendarPage {
         currentDate: new Date()
     }; // these are the variable used by the calendar.
     loadEvents() {
-        this.eventSource = this.createRandomEvents();
+//        this.eventSource = this.createRandomEvents();
+        this.eventSource = this.events;
     }
     onViewTitleChanged(title) {
         this.viewTitle = title;

@@ -22,6 +22,11 @@
     <ion-navbar color="primary">
         <ion-title>{{viewTitle}}</ion-title>
         <ion-buttons end>
+            <button ion-button icon-only (click)="addEvent()">
+                <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-buttons end>
             <button ion-button [disabled]="isToday" (click)="today()">Today</button>
             <button ion-button (click)="changeMode('month')">M</button>
             <button ion-button (click)="changeMode('week')">W</button>
