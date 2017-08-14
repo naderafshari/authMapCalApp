@@ -1,6 +1,5 @@
 {
   "name": "AuthMapApp",
   "app_id": "d612d2d2",
-  "v2": true,
-  "typescript": true
+  "type": "ionic-angular"
 }
