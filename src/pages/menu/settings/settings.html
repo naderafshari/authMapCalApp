@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="userFormBuilder" (ngSubmit)="updateUserSettings()">
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>Full name *</ion-label>
+        <ion-input type="text" [(ngModel)]='userDetails.fullName' formControlName="fullName"></ion-input>
+      </ion-item>
+      <ion-item class="form-error-list" *ngIf="!userFormBuilder.controls.fullName.pristine && !userFormBuilder.controls.fullName.valid">
+        <p class="form-error" item-right *ngIf="!userFormBuilder.controls.fullName.pristine && userFormBuilder.controls.fullName.hasError('required')">
+          This is a required field.
+        </p>
+      </ion-item>
+    </ion-list>
+    <button type="submit" full ion-button block color="secondary" [disabled]="!userFormBuilder.valid">Save</button>
+  </form>
+</ion-content>
