@@ -29,14 +29,34 @@
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
 
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1995582700680209',
+        xfbml      : true,
+        version    : 'v2.11'
+      });
+      FB.AppEvents.logPageView();
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
+
+  <script src="build/vendor.js"></script>
 
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
 
   <!-- The bundle js is generated during the build process -->
   <script src="build/main.js"></script>
-
 </body>
 </html>

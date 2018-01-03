@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { AngularFireModule } from 'angularfire2';
@@ -49,7 +51,9 @@ import { AuthConfig } from './config'
 		HomeModule,
 		SlideBoxModule,
 		WordpressModule,
-		ServicesModule
+		ServicesModule,
+		BrowserModule,
+		HttpModule
 	],
 	bootstrap: [IonicApp],
 	entryComponents: [
